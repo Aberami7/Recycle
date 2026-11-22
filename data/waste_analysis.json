@@ -1,0 +1,253 @@
+[
+  {
+    "id": "RIQ-DEMO-1001",
+    "waste_type": "Plastic",
+    "detected_item": "Crushed clear PET water bottle with blue cap",
+    "confidence": 94.2,
+    "recyclability_score": 72,
+    "recyclability_category": "Conditionally Recyclable",
+    "sorting_recommendation": "Send to Plastic Recycling",
+    "recyclability_breakdown": {
+      "base_material_score": 86,
+      "contamination_penalty": 8,
+      "condition_adjustment": -6,
+      "final_score": 72,
+      "rule_notes": [
+        "Base material recoverability for Plastic: 86/100.",
+        "Visual contamination (Slightly Contaminated) applies a -8 point recovery penalty.",
+        "Attached secondary component (e.g., cap, label, or lid) requires separation (-6)."
+      ]
+    },
+    "phase2_servo_target": {
+      "chute_id": "CHUTE_A_PLASTIC",
+      "chute_label": "Plastic Bin (Chute A)",
+      "diverter_angle_deg": 25,
+      "hardware_executed": false
+    },
+    "contamination_level": "Slightly Contaminated",
+    "contamination_reason": "Minor internal water droplets and an attached blue polymer cap are visible; no food residue observed.",
+    "ai_explanation": "The bottle-like cylindrical contour, transparent smooth polymer surface, and ribbed wall structure match a PET beverage bottle.",
+    "visual_cues": [
+      "Cylindrical bottle silhouette and neck threading",
+      "Smooth translucent polymer surface reflections",
+      "Attached blue HDPE bottle cap detected"
+    ],
+    "attention_regions": [
+      {
+        "label": "PET bottle body & ribs",
+        "box_2d": [
+          340,
+          190,
+          670,
+          760
+        ],
+        "weight": 0.94
+      },
+      {
+        "label": "Blue polymer cap",
+        "box_2d": [
+          435,
+          745,
+          585,
+          835
+        ],
+        "weight": 0.72
+      }
+    ],
+    "image_url": "/src/assets/images/sample_plastic_bottle_1795353214639.jpg",
+    "heatmap_url": null,
+    "weight": null,
+    "created_at": "2026-11-22T10:53:14.142Z",
+    "is_demo_data": true,
+    "prediction_source": "Demo Seed Record · Prototype Reference",
+    "xai_method": "Prototype Attention Map (Simulated Grad-CAM Focal Regions)",
+    "inference_time_ms": 420,
+    "storage_provider": "local_database"
+  },
+  {
+    "id": "RIQ-DEMO-1002",
+    "waste_type": "Paper",
+    "detected_item": "Corrugated cardboard takeout box with oil stain",
+    "confidence": 91.6,
+    "recyclability_score": 42,
+    "recyclability_category": "Low Recyclability",
+    "sorting_recommendation": "Send to Non-Recyclable Waste Stream",
+    "recyclability_breakdown": {
+      "base_material_score": 84,
+      "contamination_penalty": 28,
+      "condition_adjustment": -14,
+      "final_score": 42,
+      "rule_notes": [
+        "Base material recoverability for Paper: 84/100.",
+        "Visual contamination (Moderately Contaminated) applies a -28 point recovery penalty.",
+        "Moisture or grease weakens paper/cardboard cellulose fibers (-14).",
+        "Oil-saturated or heavily soiled paper cannot be repulped cleanly and is routed to residual waste."
+      ]
+    },
+    "phase2_servo_target": {
+      "chute_id": "CHUTE_F_RESIDUAL",
+      "chute_label": "Residual Waste Bin (Chute F)",
+      "diverter_angle_deg": 175,
+      "hardware_executed": false
+    },
+    "contamination_level": "Moderately Contaminated",
+    "contamination_reason": "A dark grease and food oil stain is clearly visible across the right folding flap of the corrugated fiberboard.",
+    "ai_explanation": "Fibrous matte brown texture, straight fold seams, and corrugated flute edges indicate cardboard packaging, with visible oil saturation on the right panel.",
+    "visual_cues": [
+      "Matte fibrous brown kraft paperboard texture",
+      "Corrugated box creases and folding flaps",
+      "Visible dark oil absorption patch on right flap"
+    ],
+    "attention_regions": [
+      {
+        "label": "Corrugated cardboard body",
+        "box_2d": [
+          275,
+          240,
+          760,
+          775
+        ],
+        "weight": 0.85
+      },
+      {
+        "label": "Visible oil/food stain",
+        "box_2d": [
+          280,
+          540,
+          690,
+          775
+        ],
+        "weight": 0.96
+      }
+    ],
+    "image_url": "/src/assets/images/sample_cardboard_box_1795353214693.jpg",
+    "heatmap_url": null,
+    "weight": null,
+    "created_at": "2026-11-22T07:58:14.142Z",
+    "is_demo_data": true,
+    "prediction_source": "Demo Seed Record · Prototype Reference",
+    "xai_method": "Prototype Attention Map (Simulated Grad-CAM Focal Regions)",
+    "inference_time_ms": 465,
+    "storage_provider": "local_database"
+  },
+  {
+    "id": "RIQ-DEMO-1003",
+    "waste_type": "Metal",
+    "detected_item": "Crushed aluminum beverage can",
+    "confidence": 95.8,
+    "recyclability_score": 92,
+    "recyclability_category": "Highly Recyclable",
+    "sorting_recommendation": "Send to Metal Recovery",
+    "recyclability_breakdown": {
+      "base_material_score": 94,
+      "contamination_penalty": 0,
+      "condition_adjustment": -2,
+      "final_score": 92,
+      "rule_notes": [
+        "Base material recoverability for Metal: 94/100.",
+        "No visible contamination penalty applied (Clean surface).",
+        "Deformed/crushed geometry slightly reduces automated optical sorting efficiency (-2)."
+      ]
+    },
+    "phase2_servo_target": {
+      "chute_id": "CHUTE_C_METAL",
+      "chute_label": "Metal Bin (Chute C)",
+      "diverter_angle_deg": 85,
+      "hardware_executed": false
+    },
+    "contamination_level": "Clean",
+    "contamination_reason": "Metallic exterior and crimped rims appear dry and free of visible food or liquid buildup.",
+    "ai_explanation": "High-contrast specular reflections along crushed aluminum folds and rolled metallic rims strongly indicate a recyclable aluminum beverage can.",
+    "visual_cues": [
+      "Specular metallic sheen along crushed creases",
+      "Rolled aluminum can rim and base profile",
+      "Printed beverage graphics on thin sheet metal"
+    ],
+    "attention_regions": [
+      {
+        "label": "Crushed metallic surface",
+        "box_2d": [
+          265,
+          270,
+          725,
+          720
+        ],
+        "weight": 0.95
+      }
+    ],
+    "image_url": "/src/assets/images/sample_aluminum_can_1795353214437.jpg",
+    "heatmap_url": null,
+    "weight": null,
+    "created_at": "2026-11-22T00:18:14.142Z",
+    "is_demo_data": true,
+    "prediction_source": "Demo Seed Record · Prototype Reference",
+    "xai_method": "Prototype Attention Map (Simulated Grad-CAM Focal Regions)",
+    "inference_time_ms": 390,
+    "storage_provider": "local_database"
+  },
+  {
+    "id": "RIQ-DEMO-1004",
+    "waste_type": "Glass",
+    "detected_item": "Clear glass jar with detached metal screw lid",
+    "confidence": 92.4,
+    "recyclability_score": 76,
+    "recyclability_category": "Highly Recyclable",
+    "sorting_recommendation": "Send to Glass Recycling",
+    "recyclability_breakdown": {
+      "base_material_score": 90,
+      "contamination_penalty": 8,
+      "condition_adjustment": -6,
+      "final_score": 76,
+      "rule_notes": [
+        "Base material recoverability for Glass: 90/100.",
+        "Visual contamination (Slightly Contaminated) applies a -8 point recovery penalty.",
+        "Attached secondary component (e.g., cap, label, or lid) requires separation (-6)."
+      ]
+    },
+    "phase2_servo_target": {
+      "chute_id": "CHUTE_D_GLASS",
+      "chute_label": "Glass Bin (Chute D)",
+      "diverter_angle_deg": 115,
+      "hardware_executed": false
+    },
+    "contamination_level": "Slightly Contaminated",
+    "contamination_reason": "Glass jar interior appears clean and rinsed, though a separate metal screw lid sits beside it requiring stream separation.",
+    "ai_explanation": "Thick transparent rim threading, rigid glass wall refraction, and circular base thickness confirm a glass food jar alongside its detached lid.",
+    "visual_cues": [
+      "Thick transparent glass jar neck and screw threads",
+      "High optical clarity with circular base refraction",
+      "Detached metal twist-off lid placed adjacent"
+    ],
+    "attention_regions": [
+      {
+        "label": "Transparent glass jar",
+        "box_2d": [
+          230,
+          335,
+          760,
+          650
+        ],
+        "weight": 0.92
+      },
+      {
+        "label": "Detached metal lid",
+        "box_2d": [
+          455,
+          650,
+          720,
+          880
+        ],
+        "weight": 0.68
+      }
+    ],
+    "image_url": "/src/assets/images/sample_glass_jar_1795353214465.jpg",
+    "heatmap_url": null,
+    "weight": null,
+    "created_at": "2026-11-21T13:18:14.142Z",
+    "is_demo_data": true,
+    "prediction_source": "Demo Seed Record · Prototype Reference",
+    "xai_method": "Prototype Attention Map (Simulated Grad-CAM Focal Regions)",
+    "inference_time_ms": 410,
+    "storage_provider": "local_database"
+  }
+]

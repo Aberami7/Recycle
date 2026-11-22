@@ -1,0 +1,6 @@
+{
+  "name": "RecycleIQ",
+  "description": "AI-Driven Intelligent Recyclability Assessment and Waste Sorting System (Phase 1 Software Prototype)",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": []
+}
